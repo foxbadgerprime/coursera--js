@@ -26,7 +26,7 @@ function show() {
 }
 show();
 
-git// console.log(functionVar); // Throws ReferenceError
+// console.log(functionVar); // Throws ReferenceError
 // console.log(functionLet); // Throws ReferenceError
 // console.log(functionConst); // Throws ReferenceError
 
