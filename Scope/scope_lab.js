@@ -25,7 +25,28 @@ function show() {
     const functionConst = "I'm a block-scoped const";
 }
 show();
-    
-console.log(functionVar); // Throws ReferenceError
-console.log(functionLet); // Throws ReferenceError
-console.log(functionConst); // Throws ReferenceError
+
+git// console.log(functionVar); // Throws ReferenceError
+// console.log(functionLet); // Throws ReferenceError
+// console.log(functionConst); // Throws ReferenceError
+
+// Practice tasks
+// 1. Create one block using {} and declare variables using let, const, and var.
+// 2. Then, try to reassign these variables within the curly braces {}. Check for any errors that may occur.
+// 3. Next, try to reassign the same variables outside the block {} and check if assignment outside the sope of variables where the variables are assigned can be done or not.
+{
+    // Part 1
+    // let   $practiceLet   = "I'm a block-scoped let";
+    // const $practiceConst = "I'm a block-scoped const";
+    var   $practiceVar   = "I'm a block-scoped var";
+
+    // Part 2
+    let   $practiceLet   = "Let reassignment";
+    const $practiceConst = "Const reassignment";
+    var   $practiceVar   = "Var reassignment";
+}
+// Part 3
+let   $practiceLet   = "Let reassignment";
+const $practiceConst = "Const reassignment";
+var   $practiceVar   = "Var reassignment";
+
