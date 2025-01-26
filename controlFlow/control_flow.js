@@ -54,6 +54,9 @@ let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticate
 
 console.log("Authentication Status:", authenticationStatus);
 
+console.log("----------");
+
+
 // Practice task
 /* Suppose an organization arranges a "Dietary Services" program to provide diets to its employees and customers, based on a person's weight and day-to-day routine. You need to create an authorization-based code to provide access to people based on their roles in organization, such as employees, enrolled members for "Dietary Services," and subscribers.
 
@@ -67,4 +70,26 @@ If the person is a Non-Subscriber, they need to enroll or at least subscribe fir
 
 You need to communicate with the user by printing a message indicating whether that person is eligible to avail which type of services.
 */
+
+// Variable Assignments
+let $dsRole = "employee";
+let $dsAccessLevel;
+let $dsAccessMessage;
+
+// Access Level and Message
+if ($dsRole === "employee") {
+    $dsAccessLevel   = "Employee";
+    $dsAccessMessage = "Full access to Dietary Services";
+} else if ($dsRole === "member") {
+    $dsAccessLevel   = "Enrolled Member";
+    $dsAccessMessage = "Full access to Dietary Services plus 1:1 with a dietician";
+} else if ($dsRole === "subscriber") {
+    $dsAccessLevel   = "Subscriber";
+    $dsAccessMessage = "Partial access to Dietary Services (facilitation only)";
+} else {
+    $dsAccessLevel   = "Non-Subscriber";
+    $dsAccessMessage = "No access";
+}
+
+console.log("Access Level:", $dsAccessLevel + " - " + $dsAccessMessage);
 
