@@ -30,6 +30,9 @@ function endTest() {
         return word !== "";
     }).length;
 
+    // Find the length of the typed text
+    var typedText = userTypedText.length;
+
     var wpm = 0; // Default value
 
     if (timeElapsed !== 0 && !isNaN(typedWords)) {
@@ -39,6 +42,7 @@ function endTest() {
     // Display the results
     var outputDiv = document.getElementById("output");
     outputDiv.innerHTML = "<h2>Typing Test Results:</h2>" +
+        "<p>Total Length: " + typedText + "</p>" +
         "<p>Words Typed: " + typedWords + "</p>" +
         "<p>Time Elapsed: " + timeElapsed.toFixed(2) + " seconds</p>" +
         "<p>Words Per Minute (WPM): " + wpm + "</p>";
@@ -48,3 +52,8 @@ function endTest() {
     button.innerHTML = "Start Test";
     button.onclick = startTest;
 }
+
+// Student note: This simple WPM calculator could use some improvement
+// - Initiate time counter when first keypress is entered after press Start Test
+// - Update end time counter upon each keypress that is not End Test
+// - Combine "Start Test" and "End Test" button into one button with dynamic test
